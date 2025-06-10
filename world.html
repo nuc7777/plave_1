@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PLAVE 世界觀介紹</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans TC', sans-serif;
+      background: linear-gradient(to bottom, #f7f9fc, #ffffff);
+      color: #333;
+      line-height: 1.8;
+    }
+
+    header {
+      padding: 80px 20px 40px;
+      text-align: center;
+      background: #fff;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .text {
+      flex: 1 1 400px;
+      padding: 20px;
+      max-width: 600px;
+    }
+
+    .image {
+      flex: 1 1 300px;
+      padding: 20px;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .image img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .section-alt {
+      flex-direction: row-reverse;
+      background: #f0f4f8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        flex-direction: column;
+      }
+      .section-alt {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>PLAVE 世界觀</h1>
+  <p>從虛擬走向真實，揭開 PLAVE 的起源與角色故事</p>
+</header>
+
+<section class="fade">
+  <div class="text">
+    <h2>起源故事</h2>
+    <p>
+      PLAVE(韓文:플레이브/日文:プレイブ) 是由五名來自 ASTERUM 外星人歌手所組成的男子團體，其使命是藉由音樂和表演傳遞積極正面的影響力，希望透過音樂和舞臺演出為 TERRA (地球)居民帶來歡樂。
+    </p>
+  </div>
+  <div class="image">
+    <img src="https://plave-note.vercel.app/assets/plave-world-1.jpg" alt="PLAVE 起源">
+  </div>
+</section>
+
+<section class="fade section-alt">
+  <div class="text">
+    <h2>世界觀</h2>
+    <p>
+      來自 CAELUM 的外星人
+      我們生活在一個名為 CAELUM 的星座上，除了河玟。
+
+      進入 ASTERUM 空間
+      我們在 ASTERUM 相聚，這是一個連通 CAELUM 和 TERRA 的裂縫空間。
+
+      與 TERRA 的 PLLI 們相遇
+      為了和粉絲們見面，現在我們開始在 TERRA 進行活動。
+    </p>
+  </div>
+  <div class="image">
+    <img src="https://plave-note.vercel.app/assets/plave-members.jpg" alt="PLAVE 成員">
+  </div>
+</section>
+
+<section class="fade">
+  <div class="text">
+    <h2>宇宙設定</h2>
+    <p>
+      PLAVE 所在的世界融合了數位與現實的邊界，他們透過虛擬身份連結真實情感，並與現實世界互動、成長。
+      他們的音樂與故事反映著在虛擬中尋找真實、在數位中綻放真誠的價值。
+    </p>
+  </div>
+  <div class="image">
+    <img src="https://plave-note.vercel.app/assets/plave-world-2.jpg" alt="PLAVE 宇宙">
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 PLAVE 世界觀 | 製作 by nuc777
+</footer>
+
+<script>
+  // 滾動淡入效果
+  const sections = document.querySelectorAll('.fade');
+  const onScroll = () => {
+    const trigger = window.innerHeight * 0.9;
+    sections.forEach(section => {
+      const top = section.getBoundingClientRect().top;
+      if (top < trigger) section.classList.add('visible');
+    });
+  };
+  window.addEventListener('scroll', onScroll);
+  window.addEventListener('load', onScroll);
+</script>
+
+</body>
+</html>

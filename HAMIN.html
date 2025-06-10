@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAMIN- PLAVE</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f6fc;
+            color: #333;
+        }
+
+        /* 導覽列 */
+        .navbar {
+            background-color: #61c154;
+            color: white;
+            padding: 1em;
+            text-align: center;
+            position: fixed;        /* 固定在畫面上 */
+            top: 0;                 /* 從視窗頂部開始 */
+            width: 100%;            /* 滿版寬度 */
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 1em;
+        }
+
+        .profile-container {
+            max-width: 900px;
+            margin: 2em auto;
+            background-color: white;
+            border-radius: 20px;
+            padding: 2em;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            margin-top: 6em;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2em; /* 控制圖片之間的間距 */
+            margin-bottom: 1.5em;
+        }
+
+        .top-bar img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%; /* 改為 50%，確保正圓形 */
+            object-fit: cover;
+            opacity: 0.5;
+            border: 2px solid white;
+            transition: opacity 0.3s ease;
+        }
+        .top-bar a:not(:first-child) img {
+            opacity: 0.5;
+        }
+        .top-bar a img:hover {
+            opacity: 1;
+        }
+        .top-bar a img:hover,
+        .top-bar a.active img {
+            opacity: 1;
+        }
+
+        .color-dots {
+            text-align: center;
+            margin: 1em 0;
+        }
+
+        .color-dots span {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 0 6px;
+            border-radius: 50%;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5em;
+            align-items: start;
+        }
+
+        .left-info {
+            text-align: center;
+        }
+
+        .left-info img.main {
+            width: 220px;
+            height: auto;
+            border-radius: 20px;
+            margin-bottom: 1em;
+        }
+
+        .hamin-name {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 0.2em 0;
+        }
+
+        .right-info {
+            font-size: 0.95em;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            margin-top: 2em;
+            background-color: #eeffea;
+            border-left: 5px solid #86e188;
+            padding: 1em;
+            border-radius: 10px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2em;
+        }
+
+        .gallery img {
+            width: 130px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 1em;
+        }
+
+        .footer-note {
+            font-size: 0.8em;
+            color: #777;
+            text-align: center;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 導覽列 -->
+<div class="navbar">
+    <a href="index.html">HOME</a>
+    <a href="ABOUT.html">ABOUT</a>
+    <a href="#about">關於HAMIN</a>
+    <a href="#gallery">簽名</a>
+</div>
+
+<div class="profile-container">
+
+    <div class="top-bar">
+        <a href="YEJUN.html"><img src="image/Y-1.jpg" alt="Y"></a>
+        <a href="NOAH.html"><img src="image/N-1.jpg" alt="Y"></a>
+        <a href="BAMBY.html"><img src="image/B-1.jpg" alt="H"></a>
+        <a href="EUNHO.html"><img src="image/E-1.jpg" alt="H"></a>
+        <a href="HAMIN.html" class="active"><img src="image/H-1.jpg  " alt="N"></a>
+    </div>
+
+
+
+    <div class="color-dots">
+        <span style="background-color:#7091ff;"></span>
+        <span style="background-color:#cfa3ff;"></span>
+        <span style="background-color:#ff9ce2;"></span>
+        <span style="background-color:rgba(255,79,79,0.96);"></span>
+        <span style="background-color:#8bd871;"></span>
+    </div>
+
+    <div class="info-grid" id="about">
+        <div class="left-info">
+            <img src="image/H.jpg" alt="HAMIN 主圖" class="main">
+            <div class="hamin-name">柳河玟 유하민 🖤</div>
+        </div>
+        <div class="right-info">
+            <p><strong>出生：</strong>????年11月1日</p>
+            <p><strong>身高：</strong>184cm</p>
+            <p><strong>MBTI：</strong>INFJ-A</p>
+            <p><strong>代表色：</strong>黑色</p>
+            <p><strong>團隊中角色：</strong>主舞、領饒舌、編舞</p>
+            <p><strong>暱稱：</strong>河玟 ni</p>
+            <p><strong>出道日期：</strong>2023年3月12日</p>
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <p><strong></strong>關於順序的稱呼：粉絲們會稱河玟為5，年齡順序(由大致小)，因此河玟也是團隊中的忙內</p>
+    </div>
+
+    <div class="gallery" id="gallery">
+        <p>簽名：</p>
+        <img src="image/H簽名.png" alt="HAMIN 簽名">
+    </div>
+
+    <div class="footer-note">
+        PLAVE - 虛擬與真實交會之地。
+    </div>
+
+</div>
+
+</body>
+</html>
